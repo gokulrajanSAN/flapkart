@@ -1,34 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className='app'>
+      <div className='nav'>
+        <div className='logo'>
+          <img className='logo-svg' src="src\assets\logo.svg" alt="flapkart logo" />
+        </div>
+        <div className='search-bar'>
+          <img className='search-icon' src="src\assets\icons-search.svg" alt="" />
+          <input className='search' type="search" name="" id="" placeholder='Search for products, brands etc.,.' />
+        </div>
+        <div>
+          
+        </div>
+        <div>cart</div>
+        <div>Seller</div>
+        <div>dropdown</div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      <div className='category'>product category</div>
+      <div className='offers'>offers</div>
+    </div>
   )
 }
 
