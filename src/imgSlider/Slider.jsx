@@ -38,9 +38,10 @@ const Slider = () => {
                     src={img}
                     style={{
                         translate: `${-100 * currentSlide.slide}%`,
-                        transition: '999ms ease-in-out'
+                        transition: '999ms ease-in-out',
+                        width:'100%'
                     }} />
-            )}
+            )} 
         </div>
     )
 }

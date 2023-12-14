@@ -7,7 +7,7 @@ function App() {
   return (
     <div className='app'>
       <Navbar></Navbar>
-      <Slider></Slider>
+      <div style={{ padding: "12px" }}><Slider></Slider></div>
     </div>
   )
 }

@@ -178,13 +178,14 @@
 .menu {
     width: 2rem;
     height: 2rem;
-    fill: blue;
+    fill: blue; 
     padding: 0rem;
     margin: 0rem;
     border: 0rem;
     background-color: transparent;
     cursor: pointer;
     position: relative;
+    /* z-index: 100; */
 }
 
 .menu * {
