@@ -12,8 +12,11 @@ const Slider = () => {
 
     const [currentSlide, setslide] = useState({ slide: 0, direction: 'forward' })
 
+    const pre = () => setslide({ ...currentSlide, slide: currentSlide.slide - 1 });
+    const next = () => setslide({ ...currentSlide, slide: currentSlide.slide + 1 });
+
     useEffect(() => {
-        setTimeout(() => {
+        const timeOut = setTimeout(() => {
             if (currentSlide.direction === 'forward') {
                 if (currentSlide.slide === 4) {
                     setslide({ slide: 3, direction: 'b' })
@@ -28,10 +31,11 @@ const Slider = () => {
                 }
             }
         }, 2900);
+        return () => clearTimeout(timeOut)
     }, [currentSlide.slide])
 
     return (
-        <div className='slider'>
+        <div className='slider-con'>
             {images.map((img) =>
                 <img
                     key={img}
@@ -39,9 +43,11 @@ const Slider = () => {
                     style={{
                         translate: `${-100 * currentSlide.slide}%`,
                         transition: '999ms ease-in-out',
-                        width:'100%'
+                        width: '100%'
                     }} />
-            )} 
+            )}
+            <button className='left-btn' onClick={pre} disabled={currentSlide.slide === 0} >PRE</button>
+            <button className='right-btn' onClick={next} disabled={currentSlide.slide === 4}>NEXT</button>
         </div>
     )
 }

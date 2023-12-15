@@ -11,6 +11,7 @@
 
     font-size: 1.2rem;
     position: sticky;
+    z-index: 10;
 }
 
 .logo {
@@ -55,8 +56,7 @@
 
 .login-info {
     padding: 0rem .2rem;
-    max-width: 8rem;
-    width: 100%;
+    width: 8rem;
     height: 3.1rem;
 
     background-color: transparent;
@@ -69,10 +69,10 @@
     border-color: transparent;
     font-size: 1.2rem;
     transition: 200ms ease-in-out;
+    position: relative;
 }
 
 .login-info *,
-/* .menu *, */
 .wallet * {
     background-color: transparent;
     fill: blue;
@@ -81,6 +81,8 @@
 .login-info:hover {
     background-color: rgb(41, 41, 227);
     transition: 200ms ease-in-out;
+    box-shadow: 1px 1px 7px 4px #d5ddfc;
+
 }
 
 .login-info:hover * {
@@ -113,6 +115,8 @@
 .cart:hover .cart-no {
     transform: scale(1.10);
     transition: 200ms ease-in-out;
+    box-shadow: 1px 1px 7px 4px #d5ddfc;
+
 }
 
 .cart {
@@ -146,7 +150,7 @@
     gap: .2rem;
     padding: 0rem;
     border: 0rem;
-    width: 6rem;
+    /* width: 6rem; */
     background-color: transparent;
     cursor: pointer;
     /* color: blue; */
@@ -168,6 +172,8 @@
 .wallet:hover .money {
     transform: scale(1.10);
     transition: 200ms ease-in-out;
+    box-shadow: 1px 1px 7px 4px #d5ddfc;
+    border-radius: .4rem;
 }
 
 .wallet-icon {
@@ -176,19 +182,30 @@
 }
 
 .menu {
-    width: 2rem;
-    height: 2rem;
-    fill: blue; 
+    width: 2.9rem;
+    height: 2.6rem;
+    fill: blue;
     padding: 0rem;
     margin: 0rem;
-    border: 0rem;
+    border: 1px transparent solid;
+
     background-color: transparent;
     cursor: pointer;
     position: relative;
     /* z-index: 100; */
 }
 
+.menu:hover {
+    background-color: rgb(247, 247, 255);
+    border-radius: .7rem;
+    border: 1px rgb(70, 70, 255) solid;
+    box-shadow: 1px 1px 7px 4px #d5ddfc;
+}
+
 .menu * {
     background-color: transparent;
-    /* fill: blue; */
+}
+
+.login-all * {
+    background-color: transparent;
 }

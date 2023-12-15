@@ -1,6 +1,28 @@
-.slider {
+.slider-con {
+    position: relative;
+    min-width: 47rem;
     display: flex;
-    width: 100%;
     overflow: hidden;
-    /* z-index: 0; */
+}
+
+.left-btn,
+.right-btn {
+    all: unset;
+    position: absolute;
+    height: 100%;
+    width: 3.2rem;
+
+    padding: .4rem;
+    border: 0px blue solid;
+    opacity: 0.7;
+    background-color: rgb(185, 185, 255);
+    cursor: pointer;
+}
+
+.left-btn {
+    left: 0;
+}
+
+.right-btn {
+    right: 0;
 }

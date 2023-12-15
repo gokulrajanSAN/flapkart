@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import './Navbar.css'
 import Menu from './Menu'
+import Login from './login/Login'
 
 const Navbar = () => {
 
     const [menudd, setMenudd] = useState(false)
+    const [showLogin, setShowLogin] = useState(false)
 
     return (
         <div>
@@ -20,15 +22,26 @@ const Navbar = () => {
                     </button>
                 </div>
 
-                <button className='login-info'>
+                <div className='login-all' onMouseEnter={() => setShowLogin(true)} onMouseLeave={() => setShowLogin(false)} style={{ backgroundColor: 'white', position: 'relative' }}>
+                    <button className='login-info'>
+                        <svg height="24" width="24" version="1.1" viewBox="0 0 24 24"><path d="M12,0C5.4,0,0,5.4,0,12c0,6.6,5.4,12,12,12s12-5.4,12-12C24,5.4,18.6,0,12,0z M12,4c2.2,0,4,2.2,4,5s-1.8,5-4,5   s-4-2.2-4-5S9.8,4,12,4z M18.6,19.5C16.9,21,14.5,22,12,22s-4.9-1-6.6-2.5c-0.4-0.4-0.5-1-0.1-1.4c1.1-1.3,2.6-2.2,4.2-2.7   c0.8,0.4,1.6,0.6,2.5,0.6s1.7-0.2,2.5-0.6c1.7,0.5,3.1,1.4,4.2,2.7C19.1,18.5,19.1,19.1,18.6,19.5z" /></svg>
+                        <div>Login</div>
+                        <div className='arrow'><svg height="14" width="14" viewBox="0 0 448 512"><path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" /></svg></div>
+                    </button>
+
+                    {showLogin && <Login></Login>}
+
+                </div>
+
+                {/* <button className='login-info' onMouseEnter={() => setShowLogin(true)} onMouseLeave={() => setShowLogin(true)}>
                     <svg height="24" width="24" version="1.1" viewBox="0 0 24 24"><path d="M12,0C5.4,0,0,5.4,0,12c0,6.6,5.4,12,12,12s12-5.4,12-12C24,5.4,18.6,0,12,0z M12,4c2.2,0,4,2.2,4,5s-1.8,5-4,5   s-4-2.2-4-5S9.8,4,12,4z M18.6,19.5C16.9,21,14.5,22,12,22s-4.9-1-6.6-2.5c-0.4-0.4-0.5-1-0.1-1.4c1.1-1.3,2.6-2.2,4.2-2.7   c0.8,0.4,1.6,0.6,2.5,0.6s1.7-0.2,2.5-0.6c1.7,0.5,3.1,1.4,4.2,2.7C19.1,18.5,19.1,19.1,18.6,19.5z" /></svg>
                     <div>Login</div>
                     <div className='arrow'><svg height="14" width="14" viewBox="0 0 448 512"><path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" /></svg></div>
-                </button>
+                    {setShowLogin && <Login></Login>}
+                </button> */}
 
                 <button className='cart'>
                     <svg className='cart-icon' viewBox="0 0 576 512" ><path d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z" /></svg>
-                    {/* <p className='cart-no'>22</p> */}
                     <div className='cart-no'>22</div>
                 </button>
 
@@ -39,7 +52,7 @@ const Navbar = () => {
                 </button>
 
                 <button className='menu' onMouseEnter={() => setMenudd(true)} onMouseLeave={() => setMenudd(false)}>
-                    <svg height="29" width="29" viewBox="0 0 256 256"><path d="M156,128a28,28,0,1,1-28-28A28.1,28.1,0,0,1,156,128ZM128,76a28,28,0,1,0-28-28A28.1,28.1,0,0,0,128,76Zm0,104a28,28,0,1,0,28,28A28.1,28.1,0,0,0,128,180Z" /></svg>
+                    <svg className='menu-logo' height="29" width="29" viewBox="0 0 256 256"><path d="M156,128a28,28,0,1,1-28-28A28.1,28.1,0,0,1,156,128ZM128,76a28,28,0,1,0-28-28A28.1,28.1,0,0,0,128,76Zm0,104a28,28,0,1,0,28,28A28.1,28.1,0,0,0,128,180Z" /></svg>
                     {menudd && <Menu></Menu>}
                 </button>
             </div>
