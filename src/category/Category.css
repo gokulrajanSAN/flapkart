@@ -1,0 +1,27 @@
+.category-con {
+    display: flex;
+    justify-content: space-around;
+    gap: 3.1rem;
+    padding: 1.1rem 2.2rem;
+    background-color: white;
+}
+
+
+@media (max-width: 1200px) {
+    .category-con {
+        overflow-x: scroll;
+        justify-content: normal;
+    }
+}
+
+.category-item {
+    display: grid;
+    place-items : center;
+    gap: .6rem;
+    background-color: white;
+    text-align: center;
+}
+
+.category-item * {
+    background-color: white;
+}

@@ -18,8 +18,8 @@ const Slider = () => {
     useEffect(() => {
         const timeOut = setTimeout(() => {
             if (currentSlide.direction === 'forward') {
-                if (currentSlide.slide === 4) {
-                    setslide({ slide: 3, direction: 'b' })
+                if (currentSlide.slide === (images.length - 1)) {
+                    setslide({ slide: (images.length - 2), direction: 'b' })
                 } else {
                     setslide({ ...currentSlide, slide: currentSlide.slide + 1 })
                 }
@@ -46,9 +46,28 @@ const Slider = () => {
                         width: '100%'
                     }} />
             )}
+
             <button className='left-btn' onClick={pre} disabled={currentSlide.slide === 0} >PRE</button>
             <button className='right-btn' onClick={next} disabled={currentSlide.slide === 4}>NEXT</button>
-        </div>
+
+            <div className='slider-dots-con'>
+                <div className='slider-dots'>{[...Array(images.length)].map((e, i) =>
+                    <button className='slider-dot'
+                        onClick={() => setslide({ ...currentSlide, slide: i })}
+                        key={i} type="button">
+                    </button>
+                )}
+                </div>
+                <button className='slider-move-dot' disabled
+                    style={{
+                        translate: `${2.4 * currentSlide.slide}rem`,
+                        transition: '1900ms ease-in-out',
+                    }}
+                ></button>
+
+            </div>
+
+        </div >
     )
 }
 

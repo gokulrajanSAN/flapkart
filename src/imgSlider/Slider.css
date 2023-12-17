@@ -3,14 +3,18 @@
     min-width: 47rem;
     display: flex;
     overflow: hidden;
+    background-color: rgb(185, 185, 255);
 }
 
 .left-btn,
 .right-btn {
     all: unset;
     position: absolute;
-    height: 100%;
     width: 3.2rem;
+    height: 40%;
+
+    top: 50%;
+    transform: translateY(-50%);
 
     padding: .4rem;
     border: 0px blue solid;
@@ -25,4 +29,75 @@
 
 .right-btn {
     right: 0;
+}
+
+.slider-dots-con {
+    position: absolute;
+    bottom: 4%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    padding: .4rem .7rem;
+    background-color: gray;
+    border-radius: 2rem;
+    /* position: relative; */
+}
+
+.slider-dots {
+    display: flex;
+    gap: 1.4rem;
+    background-color: transparent;
+}
+
+.slider-dot {
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    border: 1px white solid;
+    background-color: white;
+    cursor: pointer;
+}
+
+.slider-move-dot {
+    position: absolute;
+    border-radius: 1rem;
+    width: 1.5rem;
+    height: 1rem;
+
+    top: 23%;
+    left: 4%;
+
+    border: 2px white solid;
+    background-color: white;
+
+    /* border: 2px red solid;
+    background-color: transparent; */
+
+    animation-name: pulu;
+    animation-delay: 2900ms;
+    animation-duration: 2900ms;
+    animation-iteration-count: infinite;
+    transition-timing-function: ease-in-out;
+}
+
+@keyframes pulu {
+    0% {
+        width: 1.5rem;
+    }
+
+    25% {
+        width: 1.5rem;
+    }
+
+    50% {
+        width: 2.7rem;
+    }
+
+    75% {
+        width: 1.5rem;
+    }
+
+    100% {
+        width: 1.5rem;
+    }
 }
