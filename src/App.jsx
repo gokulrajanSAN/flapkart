@@ -5,6 +5,7 @@ import Category from './category/Category'
 import LoginPopup from './loginPopup/LoginPopup'
 import { useEffect, useState } from 'react'
 import Phones from './phones/Phones'
+import BestSelling from './bestSelling/BestSelling'
 
 function App() {
 
@@ -26,7 +27,9 @@ function App() {
 
       {/* <div style={{ padding: "12px" }}><Slider></Slider></div> */}
 
-      <Phones></Phones>
+      {/* <Phones></Phones> */}
+
+      <BestSelling></BestSelling>
 
     </div>
   )
