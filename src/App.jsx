@@ -6,10 +6,11 @@ import LoginPopup from './loginPopup/LoginPopup'
 import { useEffect, useState } from 'react'
 import Phones from './phones/Phones'
 import BestSelling from './bestSelling/BestSelling'
+import Footer from './footer/Footer'
 
 function App() {
 
-  const [loginPopup, setLoginPopup] = useState(false)
+  const [loginPopup, setLoginPopup] = useState(true)
 
   useEffect(() => {
     setTimeout(() => {
@@ -17,20 +18,29 @@ function App() {
     }, 4000)
   }, [])
 
+  const [theme, setTheme] = useState("Light")
+
+  const changeTheme = () => {
+    setTheme(theme === 'Light' ? 'Dark' : 'Light')
+  }
+
   return (
-    <div className='app'>
-      {/* <Navbar></Navbar> */}
+    <div className='app' style={{ backgroundColor: (theme === 'Light' ? 'whitesmoke' : 'black') }}>
 
-      {/* {loginPopup && <LoginPopup setLoginPopup={setLoginPopup} ></LoginPopup>} */}
+      <Navbar setTheme={setTheme} theme={theme} changeTheme={changeTheme}></Navbar>
+      {loginPopup && <LoginPopup setLoginPopup={setLoginPopup} ></LoginPopup>}
 
-      {/* <div style={{ padding: "12px" }}><Category ></Category></div> */}
+      <div className='landingPage'>
+        <Category ></Category>
 
-      {/* <div style={{ padding: "12px" }}><Slider></Slider></div> */}
+        <Slider></Slider>
 
-      {/* <Phones></Phones> */}
+        <BestSelling ></BestSelling>
+      </div>
 
-      <BestSelling></BestSelling>
-
+      <Phones></Phones>
+      <Footer></Footer>
+      
     </div>
   )
 }

@@ -1,0 +1,65 @@
+.bestSell-con {
+    display: grid;
+    min-width: 24rem;
+    width: 100%;
+    padding: .7rem .4rem;
+    background-color: white;
+}
+
+.bestSell-title-con {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.bestSell-title-con button {
+    all: unset;
+    border: 1px transparent solid;
+    border-radius: 1rem;
+    margin: .4rem;
+    text-align: center;
+    background-color: blue;
+    color: white;
+    width: 2rem;
+}
+
+.bestSell-img-con {
+    display: flex;
+    gap: .4rem;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    background-color: white;
+}
+
+.bestSell-img-ind {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    height: fit-content;
+    border: 1px rgb(196, 196, 255) solid;
+
+}
+
+.bestSell-img-ind-img {
+    width: 14rem;
+    height: 14rem;
+    background-color: white;
+}
+
+.bestSell-img-ind-img img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+.bestSell-img-ind-title {
+    padding: .4rem;
+    background-color: white;
+}
+
+bestSell-title-con h4 {
+    background-color: white;
+    padding: .61rem;
+}

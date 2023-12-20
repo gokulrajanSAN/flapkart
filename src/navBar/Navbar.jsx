@@ -3,7 +3,7 @@ import './Navbar.css'
 import Menu from './Menu'
 import Login from './login/Login'
 
-const Navbar = () => {
+const Navbar = ({ theme, setTheme, changeTheme }) => {
 
     const [menudd, setMenudd] = useState(false)
     const [showLogin, setShowLogin] = useState(false)
@@ -53,7 +53,8 @@ const Navbar = () => {
 
                 <button className='menu' onMouseEnter={() => setMenudd(true)} onMouseLeave={() => setMenudd(false)}>
                     <svg className='menu-logo' height="29" width="29" viewBox="0 0 256 256"><path d="M156,128a28,28,0,1,1-28-28A28.1,28.1,0,0,1,156,128ZM128,76a28,28,0,1,0-28-28A28.1,28.1,0,0,0,128,76Zm0,104a28,28,0,1,0,28,28A28.1,28.1,0,0,0,128,180Z" /></svg>
-                    {menudd && <Menu></Menu>}
+                    
+                    {menudd && <Menu setTheme={setTheme} theme={theme} changeTheme={changeTheme}></Menu>}
                 </button>
             </div>
         </div>

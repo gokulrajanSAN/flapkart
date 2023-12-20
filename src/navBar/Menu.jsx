@@ -1,13 +1,13 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 import './Menu.css'
 
-const Menu = () => {
+const Menu = ({setTheme, theme, changeTheme}) => {
 
-    const [theme, setTheme] = useState("Dark")
+    // const [theme, setTheme] = useState("Dark")
 
-    const changeTheme = () => {
-        setTheme(theme === 'Dark' ? 'Light' : 'Dark')
-    }
+    // const changeTheme = () => {
+    //     setTheme(theme === 'Dark' ? 'Light' : 'Dark')
+    // }
 
     return (
         <div className="menu-dd">

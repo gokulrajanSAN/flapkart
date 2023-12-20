@@ -47,8 +47,8 @@ const Slider = () => {
                     }} />
             )}
 
-            <button className='left-btn' onClick={pre} disabled={currentSlide.slide === 0} >PRE</button>
-            <button className='right-btn' onClick={next} disabled={currentSlide.slide === 4}>NEXT</button>
+            <button className='left-btn' onClick={pre} disabled={currentSlide.slide === 0} >&lt;</button>
+            <button className='right-btn' onClick={next} disabled={currentSlide.slide === 4}>&gt;</button>
 
             <div className='slider-dots-con'>
                 <div className='slider-dots'>{[...Array(images.length)].map((e, i) =>

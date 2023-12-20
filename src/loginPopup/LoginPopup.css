@@ -1,14 +1,29 @@
+.login-pop-transparent {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
 .login-con-pop {
-    position: absolute;
-    top: 9%;
+    position: fixed;
+    z-index: 10;
+
+    /* top: 7rem;
     left: 50%;
-    translate: -50%;
+    translate: -50%; */
+
+
 
     height: 20rem;
     width: 20rem;
     display: flex;
-    z-index: 10;
-    /* margin: 2% 4%; */
     background-color: white;
     border: 1px transparent solid;
     border-radius: .4rem;
@@ -54,6 +69,7 @@
     justify-items: center;
     align-items: center;
     border-radius: 0 .4rem .4rem 0;
+    position: relative;
 }
 
 .label-email {
@@ -113,4 +129,30 @@
 
 .newsignin-btn:hover {
     text-decoration: underline;
+}
+
+.close-btn {
+    /* all: unset; */
+    padding: .4rem;
+    border: 1px red solid;
+
+
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+
+    height: 2rem;
+    width: 2rem;
+    text-align: center;
+    border-radius: .4rem;
+    font-size: 1rem;
+
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    z-index: 12;
+}
+
+.close-btn:hover {
+    background-color: white;
+    color: red;
 }

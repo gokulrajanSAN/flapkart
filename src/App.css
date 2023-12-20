@@ -1,5 +1,16 @@
 .app {
-    background-color: rgb(255, 255, 255);
     position: relative;
+    width: 100%;
 }
 
+.landingPage {
+    display: grid;
+    gap: 1rem;
+    width: 100%;
+    border: 1rem solid transparent;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}

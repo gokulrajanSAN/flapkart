@@ -12,15 +12,24 @@ import tv from '../assets/category/tv.webp'
 
 const Category = () => {
 
-    const categoryImgs = [{ name: 'Offers', path: offers }, { name: 'TV', path: tv }, { name: 'Beauty', path: beauty }, { name: 'Fashoin', path: fashoin }, { name: 'Flight & Travels', path: flight }, { name: 'Furniture', path: furniture }, { name: 'Grocery', path: grocery }, { name: 'Home', path: home }, { name: 'Laptops & Cables', path: laptop }, { name: 'Mobile & Headphones', path: mobile }];
+    const categoryImgs = [
+        { name: 'Offers', path: offers },
+        { name: 'TV', path: tv },
+        { name: 'Beauty', path: beauty },
+        { name: 'Fashoin', path: fashoin },
+        { name: 'Travel', path: flight },
+        { name: 'Furniture', path: furniture },
+        { name: 'Grocery', path: grocery },
+        { name: 'Home', path: home },
+        { name: 'Laptops', path: laptop },
+        { name: 'Mobiles', path: mobile }
+    ];
 
     return (
         <div className='category-con'>
             {categoryImgs.map((imgs) => {
-                return <div className='category-item' key={imgs}>
-                    < img
-                        src={imgs.path}
-                    />
+                return <div className='category-item' key={imgs.name}>
+                    <img src={imgs.path} />
                     <p>{imgs.name}</p>
                 </div>
             })}

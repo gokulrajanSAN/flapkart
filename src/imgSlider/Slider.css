@@ -1,16 +1,17 @@
 .slider-con {
     position: relative;
-    min-width: 47rem;
+    min-width: 24rem;
     display: flex;
     overflow: hidden;
     background-color: rgb(185, 185, 255);
+    z-index: 0;
 }
 
 .left-btn,
 .right-btn {
-    all: unset;
+    /* all: unset; */
     position: absolute;
-    width: 3.2rem;
+    width: 2rem;
     height: 40%;
 
     top: 50%;

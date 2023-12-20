@@ -1,55 +1,141 @@
 .phones-con {
-    background-color: aliceblue;
-    width: 100%;
-    min-width: 48rem;
-    /* border: 1px rgb(0, 216, 0) solid; */
     display: flex;
     flex-direction: column;
+    background-color: rgb(0, 72, 255);
     padding: .4rem;
+    width: 100%;
 }
 
 .phones-details {
     display: flex;
-    min-width: 47rem;
-    width: 100%;
+    background-color: rgb(255, 0, 0);
     padding: .4rem;
-    /* border: 1px red solid; */
 }
 
 .phones-details-con {
-    /* border: 1px rgb(255, 0, 0) solid; */
-    padding: .9rem;
-    display: flex;
-}
-
-.phones-pic-side {
-    border: 1px solid blue;
     padding: 1rem;
+    background-color: whitesmoke;
     display: flex;
+    flex-direction: column;
+    gap: .6rem;
 }
 
-.phones-pic-side-all {
-    border: 1px rgb(128, 28, 0) solid;
+.phones-pic-con {
+    /* width: 40%; */
     display: grid;
-    background-color: white;
-}
-
-.phones-pic-side-all img {
-    height: auto;
+    gap: .4rem;
 }
 
 .phones-pic-side-ind {
     padding: 1rem;
-    width: 8rem;
-    height: 8rem;
+    width: 6rem;
     background-color: white;
     border-bottom: 1px solid blue;
 }
 
 .phones-pic-main {
     padding: 2rem;
-    display: grid;
-    justify-content: center;
-    width: 26rem;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    width: 24rem;
+    position: relative;
+    /* width: 100%;
+    height: 100%; */
+}
+
+.phones-pic-main img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    /* max-width: 20rem;
+    max-height: 20rem; */
     background-color: white;
+}
+
+.phones-pic-side {
+    display: flex;
+    background-color: whitesmoke;
+}
+
+.phones-pic-side-all {
+    border: 1px blue solid;
+    border-bottom: 0px;
+    display: grid;
+    height: fit-content;
+    background-color: white;
+}
+
+
+
+.phones-pic-side-ind-all img {
+    background-color: white;
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+
+.fav-icon {
+    position: absolute;
+    left: 99%;
+    translate: -100%;
+    top: 1%;
+    border: 1px solid gray;
+    border-radius: 4rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    line-height: .24em;
+    background-color: white;
+    cursor: pointer;
+}
+
+.fav-icon svg {
+    background-color: transparent;
+}
+
+.btn-con {
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    padding: .4rem;
+}
+
+.buyNow-btn,
+.addToCart-btn {
+    width: 100%;
+    height: 2.9rem;
+    color: white;
+    font-size: medium;
+    border-radius: .2rem;
+    border: 1px solid transparent;
+
+    background-color: rgb(255, 80, 5);
+}
+
+.addToCart-btn {
+    background-color: rgb(255, 158, 23);
+}
+
+.phones-details-con .ratings {
+    display: flex;
+    gap: .4rem;
+    font-size: small;
+    text-align: center;
+}
+
+.phones-details-con .price {
+    display: flex;
+    gap: .7rem;
+    font-size: larger;
+    text-align: center;
+}
+
+.phones-details-con .bank-offer {
+    font-size: small;
+    line-height: 1.26rem;
+    padding: .4rem;
+}
+
+.phones-details-con .title {
+    /* text-wrap: nowrap; */
 }

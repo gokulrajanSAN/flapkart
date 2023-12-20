@@ -1,17 +1,19 @@
 .nav {
     width: 100%;
-    min-width: 48rem;
+
+    min-width: 24rem;
     padding: .7rem 1rem .7rem 1rem;
     background-color: white;
-
     display: flex;
     justify-content: space-around;
     align-items: center;
     gap: 1.2rem;
-
     font-size: 1.2rem;
-    position: sticky;
-    z-index: 10;
+
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
 }
 
 .logo {

@@ -1,23 +1,25 @@
 .category-con {
     display: flex;
-    justify-content: space-around;
-    gap: 3.1rem;
-    padding: 1.1rem 2.2rem;
+    justify-content: normal;
+    overflow-x: scroll;
+
+    gap: 3rem;
+    margin-top: 4.4rem;
+    padding: 1rem 2rem;
     background-color: white;
 }
 
 
-@media (max-width: 1200px) {
+@media (min-width: 64rem) {
     .category-con {
         overflow-x: scroll;
-        justify-content: normal;
+        justify-content: space-between;
     }
 }
 
 .category-item {
     display: grid;
-    place-items : center;
-    gap: .6rem;
+    place-items: center;
     background-color: white;
     text-align: center;
 }
