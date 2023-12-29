@@ -7,8 +7,13 @@ import { useEffect, useState } from 'react'
 import Phones from './phones/Phones'
 import BestSelling from './bestSelling/BestSelling'
 import Footer from './footer/Footer'
+import Signin from './navBar/signin/Signin'
+import Demo from './demo/Demo'
+
 
 function App() {
+
+  const [signig, setSignin] = useState(true)
 
   const [loginPopup, setLoginPopup] = useState(true)
 
@@ -27,20 +32,23 @@ function App() {
   return (
     <div className='app' style={{ backgroundColor: (theme === 'Light' ? 'whitesmoke' : 'black') }}>
 
-      <Navbar setTheme={setTheme} theme={theme} changeTheme={changeTheme}></Navbar>
-      {loginPopup && <LoginPopup setLoginPopup={setLoginPopup} ></LoginPopup>}
+      <Navbar setTheme={setTheme} theme={theme} changeTheme={changeTheme} setLoginPopup={setLoginPopup}></Navbar>
+      {/* {loginPopup && <LoginPopup setLoginPopup={setLoginPopup} ></LoginPopup>} */}
+
+      {/* {signig && <Signin setSignin={setSignin}></Signin>} */}
 
       <div className='landingPage'>
         <Category ></Category>
 
-        <Slider></Slider>
+        {/* <Slider></Slider> */}
 
-        <BestSelling ></BestSelling>
+        {/* <BestSelling ></BestSelling> */}
       </div>
 
-      <Phones></Phones>
-      <Footer></Footer>
-      
+      {/* <Phones></Phones> */}
+      {/* <Footer></Footer> */}
+
+      {/* <Demo></Demo> */}
     </div>
   )
 }

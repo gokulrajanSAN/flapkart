@@ -15,7 +15,7 @@ const LoginPopup = ({ setLoginPopup }) => {
                 <div className='login-con-white'>
                     <label className='label-email' htmlFor="">
                         Enter Mobile no/ Email ID <br />
-                        <input className='' type="text" name="" id="" />
+                        <input className='input-email' type="text" name="" id="" />
                         <p className='tc-p'>By continuing, you agree to Flipkart Terms of use and Privacy Policy.</p>
                     </label>
 

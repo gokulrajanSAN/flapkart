@@ -1,29 +1,74 @@
-.category-con {
-    display: flex;
-    justify-content: normal;
-    overflow-x: scroll;
+@media screen and (max-width: 160rem) {
+    .category-con {
+        justify-content: space-between;
+        gap: 3rem;
+        margin-top: 4.4rem;
+        padding: 1rem 1rem .4rem 1rem;
+        font-size: medium;
+    }
 
-    gap: 3rem;
-    margin-top: 4.4rem;
-    padding: 1rem 2rem;
-    background-color: white;
+    .category-item img {
+        object-fit: contain;
+        width: 4rem;
+        height: 4rem;
+    }
 }
 
-
-@media (min-width: 64rem) {
+@media screen and (max-width: 48rem) {
     .category-con {
-        overflow-x: scroll;
-        justify-content: space-between;
+        gap: 1rem;
+        margin-top: 2.76rem;
+        padding: .6rem .6rem 0rem .6rem;
+        font-size: small;
     }
+
+    .category-item img {
+        object-fit: contain;
+        width: 2.7rem;
+        height: 2.7rem;
+    }
+}
+
+@media screen and (max-width: 30rem) {
+    .category-con {
+        margin-top: 5.4rem;
+        font-size: x-small;
+    }
+}
+
+/* css */
+.category-con {
+    display: flex;
+    overflow-x: scroll;
+    background-color: white;
 }
 
 .category-item {
     display: grid;
     place-items: center;
+    align-items: stretch;
     background-color: white;
     text-align: center;
+    position: relative;
 }
+
 
 .category-item * {
     background-color: white;
+}
+
+.category-item .types {
+    position: absolute;
+    top: 20%;
+    left: 0%;
+    display: grid;
+    z-index: 1;
+}
+
+.category-item .types * {
+    padding: .4rem;
+}
+
+.category-item .types *:hover {
+    background-color: gray;
 }

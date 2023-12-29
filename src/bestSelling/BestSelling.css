@@ -1,15 +1,16 @@
 .bestSell-con {
     display: grid;
-    min-width: 24rem;
     width: 100%;
-    padding: .7rem .4rem;
+    padding: .4rem .4rem .1rem .4rem;
     background-color: white;
+    height: min-content;
 }
 
 .bestSell-title-con {
     display: flex;
     justify-content: space-between;
     background-color: white;
+    align-items: center;
 }
 
 .bestSell-title-con button {
@@ -62,4 +63,25 @@
 bestSell-title-con h4 {
     background-color: white;
     padding: .61rem;
+}
+
+@media screen and (max-width:160rem) {
+    .bestSell-img-ind-img {
+        width: 14rem;
+        height: 14rem;
+    }
+}
+
+@media screen and (max-width:48rem) {
+    .bestSell-img-ind-img {
+        width: 9rem;
+        height: 9rem;
+    }
+}
+
+@media screen and (max-width:30rem) {
+    .bestSell-img-ind-img {
+        width: 7rem;
+        height: 7rem;
+    }
 }

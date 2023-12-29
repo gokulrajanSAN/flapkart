@@ -13,16 +13,8 @@
 
 .login-con-pop {
     position: fixed;
+    /* top:auto; */
     z-index: 10;
-
-    /* top: 7rem;
-    left: 50%;
-    translate: -50%; */
-
-
-
-    height: 20rem;
-    width: 20rem;
     display: flex;
     background-color: white;
     border: 1px transparent solid;
@@ -57,13 +49,13 @@
 .detail-p {
     text-align: center;
     text-wrap: wrap;
-    font-size: .7rem;
+    font-size: .49em;
 }
 
 .login-con-white {
     width: 60%;
     height: 100%;
-    padding: 2%;
+    padding: 6% 2% 2% 2%;
     background-color: white;
     display: grid;
     justify-items: center;
@@ -73,27 +65,29 @@
 }
 
 .label-email {
-    font-size: .79rem;
+    font-size: .7em;
     text-align: center;
 }
 
-.label-email input {
-    width: 79%;
+.input-email {
+    width: 87%;
     margin: .4rem 0 0 0;
-    padding: 0 .6rem 0 .2rem;
+    padding:  1.2%;
     border: 1px solid black;
-    font-size: 1rem;
+    font-size: 1em;
     color: black;
+    /* height: max-content; */
 }
 
-.label-email input:active {
+.input-email:focus {
+    /* all: unset; */
     border: 1px solid blue;
     text-align: center;
 }
 
 .tc-p {
     text-wrap: wrap;
-    font-size: .6rem;
+    font-size: .64em;
     padding: .41rem;
 }
 
@@ -101,7 +95,7 @@
 .close-btn {
     background-color: white;
     color: blue;
-    font-size: .79rem;
+    font-size: .7em;
     border-radius: .4rem;
     padding: .4rem;
     border: solid blue 1px;
@@ -122,7 +116,7 @@
 .newsignin-btn {
     border: 1px transparent solid;
     color: blue;
-    font-size: .6rem;
+    font-size: .51em;
     padding: .4rem .1rem;
     cursor: pointer;
 }
@@ -133,21 +127,16 @@
 
 .close-btn {
     /* all: unset; */
-    padding: .4rem;
     border: 1px red solid;
-
-
     background-color: rgb(255, 0, 0);
     color: rgb(255, 255, 255);
-
-    height: 2rem;
-    width: 2rem;
     text-align: center;
     border-radius: .4rem;
-    font-size: 1rem;
+    font-size: .9em;
 
     position: absolute;
     top: 0%;
+    translate: -100%;
     left: 100%;
     z-index: 12;
 }
@@ -155,4 +144,46 @@
 .close-btn:hover {
     background-color: white;
     color: red;
+}
+
+@media screen and (max-width:160rem) {
+    .login-con-pop {
+        height: 27rem;
+        width: 27rem;
+        font-size: 1.6rem;
+    }
+
+    .close-btn {
+        padding: .2rem;
+        height: 2rem;
+        width: 2rem;
+    }
+}
+
+@media screen and (max-width:48rem) {
+    .login-con-pop {
+        height: 20rem;
+        width: 20rem;
+        font-size: 1.2rem;
+    }
+
+    .close-btn {
+        padding: 0rem;
+        height: 1.4rem;
+        width: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 30rem) {
+    .login-con-pop {
+        height: 16rem;
+        width: 16rem;
+        font-size: 1rem;
+    }
+
+    .close-btn {
+        padding: 0rem;
+        height: 1.4rem;
+        width: 1.4rem;
+    }
 }

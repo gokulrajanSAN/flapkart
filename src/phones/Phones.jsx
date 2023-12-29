@@ -121,6 +121,7 @@ const Phones = () => {
                 </button>
                 <img src={phones[j].pics[curImg]} />
               </div>
+              
             </div>
           })}
           <div className='btn-con'>

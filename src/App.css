@@ -3,11 +3,22 @@
     width: 100%;
 }
 
-.landingPage {
-    display: grid;
-    gap: 1rem;
-    width: 100%;
-    border: 1rem solid transparent;
+@media screen and (max-width: 120rem) {
+    .landingPage {
+        display: grid;
+        gap: 1rem;
+        width: 100%;
+        border: 1rem solid transparent;
+    }
+}
+
+@media screen and (max-width: 48rem) {
+    .landingPage {
+        display: grid;
+        gap: .4rem;
+        width: 100%;
+        border: .4rem solid transparent;
+    }
 }
 
 ::-webkit-scrollbar {

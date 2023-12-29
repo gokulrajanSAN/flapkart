@@ -1,52 +1,43 @@
 .login-con {
     display: grid;
     text-align: center;
-
     background-color: white;
     border-radius: .4rem;
     box-shadow: 1px 1px 7px 4px #d5ddfc;
-    font-size: 1.2rem;
-
     position: absolute;
-    top: 3.1rem;
-    left: 0rem;
     white-space: nowrap;
+}
+
+.login-items{
+    padding: .6rem .7rem;
 }
 
 .signin {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 1em;
     border: transparent;
-    padding: .6rem 1.4rem;
-    gap: 1.4rem;
+    gap: 1rem;
     text-align: center;
 }
 
 .signin-btn {
-    font-size: 1.2rem;
+    font-size: 1em;
     color: blue;
-    border:1px transparent solid;
+    border: 1px transparent solid;
     border-radius: .4rem;
 }
 
 .my-acc-btn {
-    font-size: 1.2rem;
+    font-size: 1em;
     border: transparent;
-    padding: .6rem 1.4rem;
 }
 
 .signin:hover,
 .my-acc-btn:hover {
     background-color: rgb(236, 236, 252);
 }
-
-.signin-btn:hover {
-    background-color: rgb(255, 255, 255);
-    border: 1px rgb(70, 70, 255) solid;
-    box-shadow: 1px 1px 7px 4px #d5ddfc;
-}   
 
 .signin-btn:active {
     background-color: rgb(3, 109, 215);
@@ -57,4 +48,29 @@
 .signin-btn:active::after {
     background-color: black;
     transition: 100ms, ease-in-out;
+}
+
+
+@media screen and (max-width:160rem) {
+    .login-con {
+        top: 2.6rem;
+        left: -2.9rem;
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width:48rem) {
+    .login-con {
+        top: 2rem;
+        left: -4rem;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width:30rem) {
+    .login-con {
+        top: 2rem;
+        left: -2.9rem;
+        font-size: .7rem;
+    }
 }

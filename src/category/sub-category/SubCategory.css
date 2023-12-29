@@ -1,0 +1,22 @@
+.sub-categories {
+    position: absolute;
+    left: 7rem;
+    top: 12rem;
+    display: grid;
+    background-color: white;
+    box-shadow: 0px 0px 4px blue;
+    font-size: 1rem;
+}
+
+.sub-categories-items {
+    background-color: white;
+    padding: .7rem .9rem;
+    font-size: .9em;
+}
+
+.sub-categories-items:hover {
+    background-color: rgb(210, 208, 255);
+    font-weight: bold;
+    text-decoration: none;
+    transition: 100ms ease-in-out ;
+}

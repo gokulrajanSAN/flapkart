@@ -1,12 +1,16 @@
 import './Login.css'
+import { useState } from 'react'
 
 const Login = () => {
+
     return (
         <div className='login-con'>
-            <div className='signin'>New User?
-                <button className='signin-btn'>Sign in</button>
+            <div className='signin login-items'>New User?
+                <button
+                    className='signin-btn'
+                    onClick={() => setSignin(true)}>Sign in</button>
             </div>
-            <button className='my-acc-btn'>My Account</button>
+            <button className='my-acc-btn login-items'>My Account</button>
         </div>
     )
 }

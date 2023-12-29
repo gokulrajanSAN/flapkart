@@ -1,15 +1,10 @@
 .menu-dd {
     display: grid;
     text-align: center;
-
     background-color: rgb(255, 255, 255);
     border-radius: .4rem;
     box-shadow: 1px 1px 7px 4px #d5ddfc;
-    font-size: 1.2rem;
-
     position: absolute;
-    top: 2.6rem;
-    left: -6.4rem;
 }
 
 .theme {
@@ -18,13 +13,11 @@
     align-items: center;
     gap: .6rem;
     /* width: 9rem; */
-
-    font-size: 1.2rem;
+    font-size: 1em;
     border: transparent;
-    padding: .6rem 1.4rem;
 }
 
-.theme:hover {
+.menu-dd-item:hover {
     background-color: rgb(236, 236, 252);
 }
 
@@ -45,4 +38,35 @@
 .N{
     padding: .6rem 1.4rem;
 
+}
+
+@media screen and (max-width:160rem){
+    .menu-dd{
+        font-size: 1.2rem;
+        top: 2.6rem;
+        left: -6.4rem;
+    }
+    .menu-dd-item{
+        padding: .6rem 1.4rem;
+    }
+}
+@media screen and (max-width:48rem){
+    .menu-dd{
+        font-size: 1rem;
+        top: 1.7rem;
+        left: -6rem;
+    }
+    .menu-dd-item{
+        padding: .4rem 1.2rem;
+    }
+}
+@media screen and (max-width:30rem){
+    .menu-dd{
+        font-size: .9rem;
+        top: 1.7rem;
+        left: -6rem;
+    }
+    .menu-dd-item{
+        padding: .26rem .7rem;
+    }
 }
