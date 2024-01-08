@@ -1,7 +1,6 @@
 .sub-categories {
     position: absolute;
-    left: 7rem;
-    top: 12rem;
+    /* top: -1rem; */
     display: grid;
     background-color: white;
     box-shadow: 0px 0px 4px blue;
@@ -18,5 +17,5 @@
     background-color: rgb(210, 208, 255);
     font-weight: bold;
     text-decoration: none;
-    transition: 100ms ease-in-out ;
+    transition: 100ms ease-in-out;
 }

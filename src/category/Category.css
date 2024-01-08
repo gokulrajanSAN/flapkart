@@ -40,18 +40,23 @@
 .category-con {
     display: flex;
     overflow-x: scroll;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
+    /* height: 26rem; */
 }
 
 .category-item {
     display: grid;
     place-items: center;
     align-items: stretch;
-    background-color: white;
+    background-color: rgb(255, 218, 218);
     text-align: center;
     position: relative;
+    padding: .6rem;
 }
 
+.category-main-item{
+    position: relative;
+}
 
 .category-item * {
     background-color: white;
@@ -59,7 +64,7 @@
 
 .category-item .types {
     position: absolute;
-    top: 20%;
+    /* top: 20%; */
     left: 0%;
     display: grid;
     z-index: 1;
