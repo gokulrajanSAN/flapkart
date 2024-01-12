@@ -116,7 +116,7 @@ const Category = () => {
                     return <div
                         onMouseEnter={(e) => {
                             setShowTypes({ display: "flex", left: e.clientX });
-                            console.log(e);
+                            console.log(e.getBoundingClientRect());
                         }}
                         onMouseLeave={(e) => setShowTypes({ display: "none", left: e.target.offsetLeft })}
 

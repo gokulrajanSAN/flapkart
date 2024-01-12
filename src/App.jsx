@@ -9,6 +9,7 @@ import BestSelling from './bestSelling/BestSelling'
 import Footer from './footer/Footer'
 import Signin from './navBar/signin/Signin'
 import Demo from './demo/Demo'
+import Cart from './stateManagement/Cart'
 
 
 function App() {
@@ -49,6 +50,8 @@ function App() {
       {/* <Footer></Footer> */}
 
       {/* <Demo></Demo> */}
+
+      <Cart></Cart>
     </div>
   )
 }
